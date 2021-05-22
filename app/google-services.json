@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1054784609990",
+    "project_id": "tipcar",
+    "storage_bucket": "tipcar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1054784609990:android:807e35b80ab39c2ecb01c7",
+        "android_client_info": {
+          "package_name": "com.mit.tipcar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1054784609990-v9upikevp4tjli31c3s0fq0vu9hbmcqj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCixWMf_FkPitespdm4H3OB10GxpsHgxRg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1054784609990-v9upikevp4tjli31c3s0fq0vu9hbmcqj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

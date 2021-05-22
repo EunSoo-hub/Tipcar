@@ -1,0 +1,111 @@
+<resources>
+    <string name="app_name">TipCar</string>
+
+    <string name="kakao_app_key">5a251552e2a609c7e502f7306c4d6f3b</string>
+    <string name="log_in_path_kakao">카카오 계정으로 로그인하기</string>
+
+    <string name="tx_log_in_id">아이디</string>
+    <string name="tx_log_in_password">패스워드</string>
+    <string name="bt_log_in">로그인</string>
+    <string name="bt_join">회원가입</string>
+
+
+    <string name="title_phonenum">안전번호</string>
+    <string name="shot_car_number">자동차 번호 촬영하기</string>
+    <string name="msg_loading">카메라 키는중...</string>
+    <string name="verify_car_number">해당 차량번호로 전화를 하시겠습니까?</string>
+    <string name="call_yes">네</string>
+    <string name="call_No">아니오</string>
+    <string name="explain_call_policy">상대방과 전화를 하게되면 양쪽 모두 안전번호로 전화를 하게되어 안전하게 통화를 하실 수 있습니다.</string>
+
+
+    <string name="menu_call">전화</string>
+    <string name="menu_insurance">보험처리</string>
+    <string name="menu_myinfo">내 정보</string>
+    <string name="menu_notice_board">게시판</string>
+    <string name="menu_caraccessories">차 부품</string>
+
+    <!--        보험처리문자열             -->
+    <string name="check_my_insurance">가입하신 보험사가 맞으신가요?</string>
+    <string name="register_my_insurance">내 보험 찾기</string>
+
+    <string name="insureance_Hyundae">현대해상</string>
+    <string name="insurance_DB">DB손해보험</string>
+    <string name="insurance_AXA">AXA손해보험</string>
+    <string name="insurance_KB">KB손해보험</string>
+    <string name="insurance_Lotte">롯데손해보험</string>
+    <string name="insurance_Hnguk">흥국화재</string>
+    <string name="insurance_The_k">The-k</string>
+    <string name="insurance_Merits">메리츠화재</string>
+    <string name="insurance_MG">MG손해보험</string>
+
+    <string name="find_my_insurance">보험/캐피탈을 검색해주세요.</string>
+    <string name="insure_type_insure">보험사</string>
+    <string name="insure_type_capital">캐피탈</string>
+
+
+    <string name="find_address">주소검색 또는 입력</string>
+    <string name="send_insure">해당 사고내용을 바탕으로 보험사를 부르겠습니까?</string>
+
+
+    <string name="notice_board">Car Tip Notice</string>
+    <string name="notice_content_appname">나만믿어!</string>
+    <string name="tv_title_content">Content</string>
+    <string name="tv_writeuser">아이디</string>
+    <string name="tv_writeday">날짜</string>
+    <string name="tv_content">내용</string>
+    <string name="content_favorite">좋아요</string>
+    <string name="content_comment">댓글달기</string>
+    <string name="content_share">공유하기</string>
+    <string name="content_recomment">댓글을 남겨보세요.</string>
+    <string name="none_notice_board_list_tx">현재 등록된 게시글이 없습니다.</string>
+
+    <string name="info_my_name">OOO</string>
+    <string name="info_my_car">내 차</string>
+    <string name="info_my_car_number">차 번호</string>
+    <string name="info_my_insure">보 험</string>
+
+    <string name="write_noticeboard_title">제목을 입력하세요</string>
+    <string name="write_noticeboard_content">내용을 입력하세요</string>
+    <string name="write_cancel">취소</string>
+    <string name="write_success">등록하기</string>
+
+    <string name="write_no_comment_state">현재 등록된 댓글이 없습니다.</string>
+
+
+    <string name="signup_logo">Sign up</string>
+    <string name="write_user_name">성함을 입력하세요.</string>
+
+    <!--    CustomDialog String-->
+
+    <string name="add_photo_way">이미지 업로드 방식을 선택하세요.</string>
+    <string name="way_album">앨범에서 가져오기</string>
+    <string name="way_camera">카메라에서 가져오기</string>
+
+
+    <!--    구글비전 테스트 스트링-->
+    <string name="action_settings">Settings</string>
+    <string name="image_details_header">Details:</string>
+    <string name="image_preview_header">Preview:</string>
+    <string name="loading_message">Uploading image. Please wait.</string>
+
+    <string name="dialog_select_prompt">Choose a picture</string>
+    <string name="dialog_select_camera">Camera</string>
+    <string name="dialog_select_gallery">Gallery</string>
+
+    <string name="image_picker_error">Something is wrong with that image. Pick a different one please.</string>
+
+<!--    최근뉴스    -->
+    <string name="today_news">오늘의 뉴스</string>
+    <string name="check_insure_price">보험료 확인하기</string>
+    <string name="check_insure_price_car">자차 보험료 확인하기</string>
+    <string name="check_insure_price_driver">운전자 보험료 확인하기</string>
+    <string name="check_mycar_price">내 차 시세 확인하기</string>
+    <string name="compare_insure">보험료 비교하기</string>
+    <string name="today_price">오늘의 시세</string>
+    <string name="today_car_price">오늘의 차량 시세 알아보기</string>
+    <string name="today_mycar_price">오늘 나의 차량 시세 알아보기</string>
+    <string name="use_question">이용 문의</string>
+    <string name="use_sell">판매점 등록하러가기 </string>
+    <string name="how_use_tipcar">TipCar 사용방법</string>
+</resources>

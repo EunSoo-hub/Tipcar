@@ -1,0 +1,73 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    lintOptions {
+        compileSdkVersion 29
+        buildToolsVersion "29.0.3"
+
+        defaultConfig {
+            applicationId "com.mit.tipcar"
+            minSdkVersion 27
+            targetSdkVersion 29
+            versionCode 1
+            versionName "1.0"
+
+            testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        }
+
+        buildTypes {
+            release {
+                minifyEnabled false
+                proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            }
+            buildTypes.each {
+                it.buildConfigField('String', 'API_KEY', '"[AIzaSyBCoMBHfS_p8Fy8NJAk_qnkCsr37zDDJ4g]"')
+            }
+        }
+//        splits {
+//            abi {
+//                enable true
+//                reset()
+//                include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+//                universalApk false
+//            }
+//        }
+        compileOptions {
+            sourceCompatibility JavaVersion.VERSION_1_8
+            targetCompatibility JavaVersion.VERSION_1_8
+        }
+    }
+}
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+dependencies {
+    testCompile 'junit:junit:4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+    implementation 'me.relex:circleindicator:1.2.2'
+    implementation 'com.rmtheis:tess-two:9.0.0'
+    //noinspection GradleCompatible
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+    implementation files('libs\\libDaumMapAndroid.jar')
+    testImplementation 'junit:junit:4.+'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'       //recyclerview추가
+    implementation 'gun0912.ted:tedpermission:2.2.3'  //권한 체크 추가
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0' //동그란 이미지뷰추가
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    api files('libs/libDaumMapAndroid.jar')
+    compile 'com.google.api-client:google-api-client-android:1.23.0' exclude module: 'httpclient'
+    compile 'com.google.http-client:google-http-client-gson:1.23.0' exclude module: 'httpclient'
+    compile 'com.google.apis:google-api-services-vision:v1-rev369-1.23.0'
+    compile 'androidx.appcompat:appcompat:1.0.0'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    implementation platform('com.google.firebase:firebase-bom:27.1.0')
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-dynamic-links:19.0.0'
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+}

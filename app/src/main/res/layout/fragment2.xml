@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_phonenum"
+            android:textColor="#000"
+            android:textSize="30dp" />
+
+        <View
+            android:id="@+id/more_divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#2a465c" />
+    </LinearLayout>
+
+
+    <!--카메라 실행되는동안 로딩바-->
+    <RelativeLayout
+        android:id="@+id/relativePbCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ProgressBar
+            android:id="@+id/pbcamera"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:indeterminateDrawable="@drawable/ic_baseline_camera_alt_24"
+            android:onClick="camera"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/text_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/pbcamera"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/shot_car_number"
+            android:textColor="@color/black"
+            android:visibility="gone" />
+
+        <!--                사진촬영전 표시될 다이얼로그      -->
+        <com.mit.tipcar.CustomViewPager
+            android:id="@+id/call_info_dialog"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_marginTop="170dp"
+            android:background="#fff"
+            />
+
+    </RelativeLayout>
+
+    <!--            메인 컨텐츠 들어가는 공간          -->
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/car_number_photo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/photo_edge"
+            android:onClick="addPhoto"
+            android:scaleType="center"
+            android:src="@drawable/ic_baseline_add_a_photo_24" />
+
+        <!--        인식된 차량 번호 텍스트       -->
+        <LinearLayout
+            android:id="@+id/Ln_car_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/car_number_text_edge"
+                android:text=""
+                android:visibility="invisible"
+                android:textSize="25dp" />
+
+            <EditText
+                android:id="@+id/image_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/car_number_text_edge"
+                android:text=""
+                android:maxLength="8"
+                android:textSize="25dp"
+                android:textColor="#000"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:background="@drawable/car_number_text_edge"
+                android:text=""
+                android:visibility="invisible"
+                android:textSize="25dp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tx_sure_call"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:gravity="center"
+            android:text="@string/verify_car_number"
+            android:textColor="#2196F3"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tx_call_info"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:text="@string/explain_call_policy"
+            android:textColor="#000000" />
+
+        <View
+            android:id="@+id/more_divider2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="30dp"
+            android:background="#2a465c" />
+        <!--        전화거는 버튼 UI          -->
+        <LinearLayout
+            android:id="@+id/Ln_call_bt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <Button
+                android:id="@+id/call_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/call_button_background"
+                android:text="@string/call_yes"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/call_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="70dp"
+                android:background="@drawable/call_button_background"
+                android:text="@string/call_No"
+                android:textColor="@color/white"/>
+        </LinearLayout>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+    <!-- 최상단으로 이동 -->
+    <ImageView
+        android:id="@+id/iv_more"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:onClick="onClick"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round_button_shape"
+        android:src="@drawable/ic_baseline_white_add_24"
+        android:visibility="visible"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
